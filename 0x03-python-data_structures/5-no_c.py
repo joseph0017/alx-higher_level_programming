@@ -4,4 +4,4 @@ def no_c(my_string):
     for elm in my_string:
         if elm != 'C' and elm != 'c':
             replace_str += elm
-    return new_str
+    return replace_str
