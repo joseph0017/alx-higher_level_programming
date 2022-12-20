@@ -2,9 +2,10 @@
 "Defines a class Square"
 import math
 
+
 class MagicClass:
-    """Class that represents a circle"""
-    def __init__(self, radius = 0):
+    """Class tha represents a circle"""
+    def __init__(self, radius=0):
         self.__radius = 0
         if type(radius) is not int and type(radius) is not float:
             raise TypeError("radius must be a number")
