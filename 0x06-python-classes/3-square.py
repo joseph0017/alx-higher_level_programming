@@ -2,7 +2,7 @@
 "Defines a class Square"
 
 class Square:
-    """a class Square that defines a square"""
+    """A class Square that defines a square"""
     def __init__(self, size=0):
         if type (size) is not int:
             raise TypeError("size must be an integer")
