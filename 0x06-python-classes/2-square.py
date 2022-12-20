@@ -4,8 +4,7 @@
 class Square:
     """class square with size set to default of 0
     size must be an integer and should not be 
-    less than zero
-    """
+    less than zero"""
     def __init__(self, size = 0):
         if type(size) is not int:
             raise TypeError("size must be an integer")
