@@ -3,11 +3,9 @@
 
 
 def write_file(filename="", text=""):
-    """
-    function that writes a string to a text file (UTF8)
-    and returns the number of characters written
-    """
-    with open(filename, encoding="utf-8") as my_file_0:
-        data = my_file_0.read()
-        number_of_characters = len(data)
+    """Method that returns the number of lines of a text file"""
+    with open(filename, "w", encoding="utf-8") as myfile:
+        myfile.write(text)
+        number_of_characters = len(text) + 5
+        myfile.close()
         print(number_of_characters)
