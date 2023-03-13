@@ -1,6 +1,6 @@
 #!/usr/bin/node
-const array = ["C is fun", "Python is cool", "JavaScript is amazing"]
+const array = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
   
-array.map((val, index) => {
+array.map((val) => {
     console.log(`${val}`);
 });
