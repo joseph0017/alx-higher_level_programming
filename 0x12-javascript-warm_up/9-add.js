@@ -2,10 +2,6 @@
 function add (a, b) {
   return a + b;
 }
-let argsOne = process.argv[2];
-let parameterOne = parseInt(argsOne);
-let argsTwo = process.argv[3];
-let parameterTwo = parseInt(argsTwo);
-a = parameterOne;
-b = parameterTwo;
+const a = parseInt(process.argv[2], 10);
+const b = parseInt(process.argv[3], 10);
 console.log(add(a, b));
