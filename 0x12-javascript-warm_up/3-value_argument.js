@@ -4,4 +4,4 @@ if (parameter) {
   console.log(`${parameter}`);
 } else {
   console.log('No argument');
-};
+}
