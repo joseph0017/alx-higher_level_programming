@@ -11,7 +11,7 @@ if __name__ == "__main__":
                                  passwd=argv[2], db=argv[3])
     mycursor = connect_db.cursor()
     sql_query = """
-SELECT * FROM cities
+SELECT cities.id, cities.name, states.name FROM cities
 JOIN states ON cities.id = states.id
 ORDER BY cities.id ASC
 """
