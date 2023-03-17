@@ -12,7 +12,8 @@ if __name__ == "__main__":
                                  passwd=argv[2], db=argv[3], charset="utf8")
     mycursor = connection.cursor()
     sql_query = """
-SELECT * FROM states WHERE states.name LIKE BINARY 'N%' ORDER BY states.id ASC"""
+SELECT * FROM states WHERE states.name LIKE BINARY 'N%' ORDER BY states.id ASC
+"""
     mycursor.execute(sql_query)
     query_rows = mycursor.fetchall()
     for row in query_rows:
