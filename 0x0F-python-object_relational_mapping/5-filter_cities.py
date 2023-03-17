@@ -20,7 +20,6 @@ ORDER BY cities.id ASC
 """
     mycursor.execute(sql_query,  (argv[4], ))
     query_row = mycursor.fetchall()
-    for result in query_row:
-        print(result)
+    print(", ".join(map(lambda x: x[0], query_row)))
     mycursor.close()
     connect_db.close()
