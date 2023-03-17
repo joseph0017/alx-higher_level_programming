@@ -9,7 +9,7 @@ from sqlalchemy.ext.declarative import declarative_base
 Base = declarative_base()
 
 
-class SomeClass(Base):
+class State(Base):
     """
     a blueprint for the states table
     """
