@@ -12,7 +12,7 @@ if __name__ == "__main__":
     mycursor = connect_db.cursor()
     sql_query = """
 SELECT cities.id, cities.name, states.name FROM cities
-JOIN states ON cities.id = states.id
+JOIN states ON cities.state_id = states.id
 ORDER BY cities.id ASC
 """
     mycursor.execute(sql_query)
