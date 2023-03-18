@@ -4,6 +4,7 @@ lists all cities from the database hbtn_0e_6_usa
 """
 
 from model_state import Base, State
+from model_city import Base, City
 from sys import argv
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
