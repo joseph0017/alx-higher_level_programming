@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """
 a python file that contains the class definition of a State
@@ -24,4 +23,4 @@ class State(Base):
         "City",
         cascade="all, delete-orphan",
         backref=backref("state", cascade="all"),
-        single_parent=True
+        single_parent=True)
