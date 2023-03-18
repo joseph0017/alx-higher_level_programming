@@ -18,11 +18,10 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     search_state = argv[4]
-    for state in session.query(State)\
-            .filter(State.name.contains(search_state)).order_by(State.id).all():
-        if state:
-            print(state.id)
-        elif(state != search_state):
-            print("Not found")
+    results = session.query(State)\
+        .filter(State.name.contains(search_state)).order_by(State.id).all()
+    if results:
+        print(results[0].id)
+    elif(results != search_state):
+        print("Not found")
     session.close()
-    
