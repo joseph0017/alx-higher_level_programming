@@ -18,4 +18,4 @@ class City(Base):
                 unique=True, autoincrement=True)
     name = Column(String(128), nullable=False)
     state_id = Column("states_element",Integer, nullable=False,
-                ForeignKey("states.states.id"))
+                ForeignKey("states.id"))
