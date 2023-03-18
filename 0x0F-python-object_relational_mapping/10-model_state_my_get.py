@@ -1,7 +1,6 @@
-
 #!/usr/bin/python3
 """
-prints the State object with the name passed
+displays the State object with the name passed
 as argument from the database hbtn_0e_6_usa
 """
 
@@ -20,7 +19,10 @@ if __name__ == "__main__":
     session = Session()
     search_state = argv[4]
     for state in session.query(State)\
-            .filter(State.name.contains(search_state)).all():
-        print(len(state))
+            .filter(State.name.contains(search_state)).order_by(State.id).all():
+        if state:
+            print(state.id)
+        elif(state != search_state):
+            print("Not found")
     session.close()
     
