@@ -1,23 +1,18 @@
 #!/usr/bin/python3
-"""Lists states"""
+'''
+class definition of a State
+'''
 
-from sqlalchemy import Column, Integer, String
+
+from sqlalchemy import Column, Integer, String, MetaData
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship, backref
-
+from sqlalchemy.orm import relationship
 Base = declarative_base()
 
 
 class State(Base):
-    """Class representing the states table"""
+    ''' State Class '''
     __tablename__ = 'states'
-
-    id = Column(Integer, nullable=False, primary_key=True,
-                autoincrement=True, unique=True)
+    id = Column(Integer, unique=True, nullable=False, primary_key=True)
     name = Column(String(128), nullable=False)
-
-    cities = relationship(
-        "City",
-        cascade="all, delete-orphan",
-        backref=backref("state", cascade="all"),
-        single_parent=True)
+    cities = relationship('City', backref='state')
