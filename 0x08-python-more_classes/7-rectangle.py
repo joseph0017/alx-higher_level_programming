@@ -20,7 +20,7 @@ class Rectangle:
         """deletes an instance from the class"""
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
-        
+
     @property
     def width(self):
         """getter for the width property"""
@@ -35,7 +35,7 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         else:
             self.__width = value
-    
+
     @property
     def height(self):
         """getter for the height property"""
@@ -59,7 +59,7 @@ class Rectangle:
         """method that returns the rectangle perimeter"""
         if self.__height or self.__width == 0:
             self.perimeter = 0
-        return(self.__width * 2  + self.__height * 2)
+        return(self.__width * 2 + self.__height * 2)
 
     def __str__(self):
         """custom string representation as #"""
