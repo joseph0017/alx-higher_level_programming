@@ -25,8 +25,8 @@ class Square(Rectangle):
 
     def __str__(self):
         """string representation for class Square"""
-        return(
-            f"[{type(self).__name__}] ({self.id}) {self.x}/{self.y} - {self.size}")
+        return(f"[{type(self).__name__}] ({self.id}) \
+                {self.x}/{self.y} - {self.size}")
 
     def update(self, *args, **kwargs):
         """
