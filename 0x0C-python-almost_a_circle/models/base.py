@@ -26,7 +26,7 @@ class Base:
         """
         class method that writes the
         JSON string representation of list_objs to a file
-        """  
+        """
         name_of_file = cls.__name__ + ".json"
         if list_objs is not None:
             list_objs = [myobj.to_dictionary() for myobj in list_objs]
