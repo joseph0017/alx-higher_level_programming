@@ -101,10 +101,9 @@ class Rectangle(Base):
         public method that prints in stdout
         the Rectangle instance with the character #
         """
-        for i in range(self.height):
-            for j in range(self.width):
-                print("#", end="")
-            print()
+        print('\n' * self.y + '\n'.join([' ' * self.x +
+                                         '#' * self.width
+                                         for i in range(self.height)]))
 
     def __str__(self):
         """
@@ -124,3 +123,9 @@ class Rectangle(Base):
             setattr(self, atrr, arg)
         for atrr, arg in kwargs.items():
             setattr(self, atrr, arg)
+
+    def to_dictionary(self):
+        """returns the dictionary representation of a Rectangle"""
+        return {'x': self.x, 'y': self.y, 'id': self.id, 'height': self.height,
+                'width': self.width}
+
