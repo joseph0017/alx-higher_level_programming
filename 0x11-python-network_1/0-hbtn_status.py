@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-# script that makes a fetch request to https://intranet.hbtn.io/status
+"""
+script that makes a fetch request to https://intranet.hbtn.io/status
+"""
+
 import urllib.request
 with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as response:
    request = response.read()
