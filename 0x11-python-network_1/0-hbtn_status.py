@@ -10,4 +10,4 @@ if __name__ == "__main__":
         request = response.read()
         print("Body response:\n\t- type: {}"
         "\n\t- content: {}\n\t- utf8 content: {}"
-        .format(type(req), req, req.decode('utf-8')))
+        .format(type(request), request, request.decode('utf-8')))
