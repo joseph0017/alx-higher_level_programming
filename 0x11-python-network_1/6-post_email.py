@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
 script that makes a POST request to URL with an email
 """
 

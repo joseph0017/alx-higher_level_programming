@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" 
-script that makes a request to a URL 
+"""
+script that makes a request to a URL
 if not successful, displays an errorcode
 """
 

@@ -12,7 +12,7 @@ if __name__ == "__main__":
         search_query = {"q": argv[1]}
     else:
         search_query = {"q": ""}
-    
+
     res = requests.post('http://0.0.0.0:5000/search_user', data=search_query)
     json_object = res.json()
     try:
