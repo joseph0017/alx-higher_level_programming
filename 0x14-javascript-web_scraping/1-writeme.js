@@ -4,9 +4,7 @@ const data = process.argv[3];
 const url = process.argv[2];
 
 fs.writeFile(url, data, (err) => {
-  if (data) {
-    console.log(data);
-  } else {
+  if (err) {
     console.log(err);
   }
 });
