@@ -9,7 +9,7 @@ request(arg, function (error, response, body) {
       data = JSON.parse(body)
       for (const film of data.results) {
           for(const character of film.characters) {
-              number += (character.endsWith(find_id) ? false : true);
+              number += (character.endsWith(find_id) ? true : false);
           }
       }
       console.log(number)
