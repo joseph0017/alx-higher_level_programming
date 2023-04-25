@@ -10,14 +10,16 @@ request(starWarsApi, function (error, response, body) {
   if (response) {
     const getResults = JSON.parse(body);
     getResults.characters.forEach((results) => {
-        //console.log(results)
-        request(results, function(err, res, body2) {
-            if (res) {
-            const characters_name = JSON.parse(body2)
-            console.log(characters_name.name)
+      //  console.log(results)
+      request(results, function(err, res, body2) {
+        if (res) {
+          const charactersName = JSON.parse(body2);
+          console.log(charactersName.name);
+        } else {
+          console.log(err);
         }
-        })
-    })    
+      });
+    });
   } else {
     console.log(error);
   }
